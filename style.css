@@ -1,0 +1,386 @@
+.fondo{
+   
+    background-color: #fdfdf7; /* Color de fondo beige suave */
+
+}
+body, .container-fluid {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar el desplazamiento horizontal */
+}
+
+/* Ajustamos el tamaño del video */
+.video-responsive {
+    width: 100%;
+    height: auto;
+}
+
+
+
+                                  /*CUENTA REGRESIVA*/
+
+.tamaño {
+    width: var(--img-width); /* Utilizamos la variable CSS para el ancho de la imagen */
+    height: var(--img-height); /* Utilizamos la variable CSS para el alto de la imagen */
+    margin-top: 50px;
+    margin-right: 10rem;
+}
+
+.im {
+    margin-right: 0rem;
+    margin-top: 7rem;
+    position: relative;
+}
+
+.im::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+:root {
+    --img-width: 30rem; /* Modifica el ancho de la imagen aquí */
+    --img-height: 30rem; /* Modifica el alto de la imagen aquí */
+}
+
+#countdown {
+   
+    font-size: 1.2rem;
+    position: absolute;
+    top: 40px; /* Ajusta la distancia desde la parte superior */
+    left: 4rem; /* Ajusta la distancia desde la izquierda */
+}
+.mover{
+    margin-left: 50px; /* Ajusta la cantidad de movimiento según sea necesario */
+    font-family: 'Allura', cursive, sans-serif;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .reloj {
+        margin-left: 30px; /* Ajusta el margen izquierdo para pantallas más anchas */
+        margin-top: -250px; /* Ajusta el margen superior para pantallas más anchas */
+    }
+}
+
+/* Quita estas reglas de aquí */
+.reloj {
+    width: 30rem; /* Ancho del contenedor */
+    height: 30rem; /* Altura del contenedor */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    margin-left: 107px; /* Mueve el elemento hacia la derecha */
+    margin-top: -310px; /* Mueve el elemento hacia arriba */
+}
+
+                                   /* FUENTE CURSIVA */
+.fuente-cursiva {
+    font-family: 'Allura', cursive, sans-serif;
+}
+@media (max-width: 767px) {
+    .fuente-cursiva {
+        max-width: 80%; /* Puedes ajustar este valor según tus necesidades */
+        margin: 0 auto; /* Centra horizontalmente el texto */
+    }
+}
+.t{
+    text-align: center;
+}
+
+.cursiva {
+    font-family: 'Allura', cursive, sans-serif;
+    margin-top: 11rem; /* Mueve el texto hacia abajo */
+    text-align: center; /* Centra horizontalmente */
+    line-height: 1.5; /* Espacio entre líneas */
+    height: 7rem; /* Altura fija del contenedor */
+    overflow: hidden; /* Oculta el exceso de texto */
+}
+.cu{
+    font-family: 'Allura', cursive, sans-serif;  
+    margin-left: 5rem;
+    margin-top: 1rem;
+   
+}
+.c{
+    font-family: 'Allura', cursive, sans-serif; 
+    margin-left: 7rem;
+    margin-top: 0.5rem;
+}
+.s{
+    font-family: 'Allura', cursive, sans-serif;   
+    margin-left: 7rem;
+}
+.si{
+    font-family: 'Allura', cursive, sans-serif;   
+    margin-left: 2rem;    
+}
+
+.r{
+margin-top: -2rem;
+}
+.ci{
+    font-family: 'Allura', cursive, sans-serif; 
+    margin-left: 9rem;
+    margin-top: -0.5rem;
+
+}
+
+.cursi{
+    font-family: 'Allura', cursive, sans-serif;
+    margin-top: 5rem; /* Mueve el texto hacia abajo */
+    text-align: center; /* Centra horizontalmente */
+    line-height: 1.5; /* Espacio entre líneas */
+    height: 3rem; /* Altura fija del contenedor */
+    overflow: hidden; /* Oculta el exceso de texto */ 
+}
+
+                                      /* COLLAGE */
+
+.collage{
+    
+ 
+   height: 100%;
+   width: 100%; 
+    
+}
+#colla{
+    margin-top: 5rem;  /* Mueve el elemento hacia abajo */
+    background-color: white;
+}
+.collag{
+    height: 80%;
+    width: 100%;   
+}
+
+
+
+                                       /* FOTO */
+.foto{
+    width: 100%;
+}
+
+
+                                        /* RECEPCION */
+
+
+.recepcion-container {
+    position: relative; /* Agregamos posicionamiento relativo al contenedor */
+    text-align: center; /* Alineamos el texto al centro horizontalmente */
+}
+
+.recepcion {
+    display: inline-block; /* Convertimos la imagen en un elemento en línea para centrarla correctamente */
+    vertical-align: middle; /* Alineamos verticalmente la imagen */
+   width: 7rem;
+   height: 7rem;
+}
+
+.recepcion-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; /* Reducir el margen izquierdo */
+    margin-top: -5px; /* Mover el texto hacia arriba */
+}
+
+
+.regalo-container {
+    position: relative; /* Agregamos posicionamiento relativo al contenedor */
+    text-align: center; /* Alineamos el texto al centro horizontalmente */
+}
+
+.regalo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 7rem;
+    height: 7rem;
+    margin-left: 9rem; /* Ajustar el margen izquierdo para mover la imagen hacia la derecha */
+   
+}
+
+.regalo-text {
+    display: inline-block; /* Convertimos el texto en un elemento en línea para centrarlo correctamente */
+    vertical-align: middle; /* Alineamos verticalmente el texto */
+    margin-left: 5px; /* Reducir el margen izquierdo */
+    margin-top: -5rem; /* Mover el texto hacia arriba */
+}
+
+
+
+
+.rega-container {
+    position: relative; /* Agregamos posicionamiento relativo al contenedor */
+    text-align: center; /* Alineamos el texto al centro horizontalmente */
+}
+
+.rega {
+    display: inline-block;
+    vertical-align: middle;
+    width: 7rem;
+    height: 7rem;
+    margin-left: 7rem; /* Ajustar el margen izquierdo para mover la imagen hacia la derecha */
+}
+
+.rega-text {
+    display: inline-block; /* Convertimos el texto en un elemento en línea para centrarlo correctamente */
+    vertical-align: middle; /* Alineamos verticalmente el texto */
+    margin-left: 10rem; /* Reducir el margen izquierdo */
+    margin-top: -14rem; /* Mover el texto hacia arriba */
+}
+
+
+.re-container {
+    position: relative; /* Agregamos posicionamiento relativo al contenedor */
+    text-align: center; /* Alineamos el texto al centro horizontalmente */
+}
+
+.re {
+    display: inline-block;
+    vertical-align: middle;
+    width: 7rem;
+    height: 7rem;
+    margin-left: 13rem; /* Ajustar el margen izquierdo para mover la imagen hacia la derecha */
+    margin-top: -8rem;
+}
+
+.re-text {
+    display: inline-block; /* Convertimos el texto en un elemento en línea para centrarlo correctamente */
+    vertical-align: middle; /* Alineamos verticalmente el texto */
+    margin-left: 5px; /* Reducir el margen izquierdo */
+    margin-top: -10rem; /* Mover el texto hacia arriba */
+}
+
+
+
+
+
+
+
+
+.regal{
+    position: absolute; /* Asegúrate de que el posicionamiento sea absoluto */
+    right: 0; /* Alinea el lado derecho del elemento con el lado derecho del contenedor */
+    left: 30%; /* Alinea el lado izquierdo del elemento con el lado izquierdo del contenedor */
+    margin: auto; /* Centra horizontalmente */
+    top: 15%; /* Ajusta la distancia desde la parte superior */
+    height: 7rem;
+    width: 7rem;
+}
+
+                                       /* Estilo para el botón */
+.boton-beige {
+    background-color: #bcbab8; /* Color beige oscuro */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    margin-left: 120px; /* Mover el botón 10px hacia la derecha */
+    margin-top: -100%;
+    
+}
+/* Estilo para el botón al pasar el mouse */
+.boton-beige:hover {
+    background-color: #a09e9c; /* Color beige más oscuro */
+}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.boton-beig {
+    background-color: #bcbab8; /* Color beige oscuro */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    margin-left: 140px; /* Mover el botón 10px hacia la derecha */
+    margin-top: -10%;
+    
+}
+
+/* Estilo para el botón al pasar el mouse */
+.boton-beig:hover {
+    background-color: #a09e9c; /* Color beige más oscuro */
+}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.boton-bei {
+    background-color: #bcbab8; /* Color beige oscuro */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    margin-left: 140px; /* Mover el botón 10px hacia la derecha */
+    margin-top: -10%;
+    
+}
+
+/* Estilo para el botón al pasar el mouse */
+.boton-bei:hover {
+    background-color: #a09e9c; /* Color beige más oscuro */
+}
+
+
+
+/*GEOLOCALOZACION*/
+#map {
+    width: 100%;
+    height: 20rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+  }
+  #ubi{
+    text-align: center;
+    background-color:rgb(235, 231, 231);
+    width: 69.4rem;
+    border-radius: 5px;
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(-10px) rotateX(10deg);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+   
+  }
+
+                         /*WHASA*/
+.wha {
+   
+    top: 50%; /* Posiciona el botón verticalmente en el centro del contenedor */
+    left: 50%; /* Posiciona el botón horizontalmente en el centro del contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón tanto horizontal como verticalmente */
+    height: 6rem;
+    width: 6rem;
+}
+
+#whatsapp {
+    width: 3rem;
+    height: 3rem;
+    bottom: 4rem;
+    right: 4rem;
+    text-align: center;
+    z-index: 1000;
+}
+/* Alinea el icono de WhatsApp horizontalmente */
+.centered-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+.unidad-tiempo {
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.texto-faltan {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.valor-tiempo {
+    font-size: 24px;
+}
+#sube{
+margin-top: 10rem;
+}
+#t{
+    margin-top: -1.5rem;
+}

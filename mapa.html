@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Navegación con Ubicación en Tiempo Real</title>
+    <!-- Incluye los estilos de Leaflet y Leaflet Routing Machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" />
+    <style>
+        /* Estilos CSS para el mapa */
+        #map {
+            height: calc(100vh - 120px); /* Ajusta la altura del mapa según el tamaño de la pantalla */
+            width: 100%;
+        }
+        /* Estilos CSS para el contenedor del control de enrutamiento */
+        #routing-control-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        /* Estilos CSS para el botón de mostrar/ocultar ruta */
+        #toggle-routing {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor del mapa -->
+    <div id="map"></div>
+    <!-- Contenedor del control de enrutamiento -->
+    <div id="routing-control-container">
+        <!-- Botón para mostrar/ocultar la ruta -->
+        <button id="toggle-routing" onclick="toggleRoutingInstructions()">Mostrar/Ocultar Ruta</button>
+        <!-- Contenedor para mostrar las instrucciones de enrutamiento -->
+        <div id="routing-container" style="display: none;"></div>
+    </div>
+
+    <!-- Incluye la librería Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Incluye la librería Leaflet Routing Machine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.js"></script>
+    <script>
+        var map, routingControl;
+
+        // Cuando el contenido del documento está completamente cargado
+        document.addEventListener("DOMContentLoaded", function() {
+            // Crea un nuevo mapa y establece la vista inicial
+            map = L.map('map').setView([8.94617, -75.44275], 15);
+
+            // Agrega una capa de azulejos OpenStreetMap al mapa
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+            // Crea un marcador para la ubicación del usuario
+            var userLocationMarker = L.marker();
+
+            // Obtiene la ubicación del usuario y la actualiza en tiempo real
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(function(position) {
+                    var userLat = position.coords.latitude;
+                    var userLng = position.coords.longitude;
+
+                    // Actualiza la posición del marcador de usuario
+                    userLocationMarker.setLatLng([userLat, userLng]).addTo(map);
+
+                    // Define el destino preestablecido
+                    var destination = [8.95233, -75.42066];
+
+                    // Crea el control de enrutamiento con los puntos de inicio y fin
+                    routingControl = L.Routing.control({
+                        waypoints: [
+                            L.latLng(userLat, userLng),
+                            L.latLng(destination[0], destination[1])
+                        ],
+                        routeWhileDragging: true,
+                        show: false // Oculta la ruta inicialmente
+                    }).addTo(map);
+                });
+            }
+        });
+
+        // Función para mostrar u ocultar las instrucciones de enrutamiento y la ruta
+        function toggleRoutingInstructions() {
+            var container = document.getElementById('routing-container');
+            if (container.style.display === 'none') {
+                // Si el contenedor está oculto, mostrarlo y mostrar la ruta
+                container.style.display = 'block';
+                routingControl.show();
+            } else {
+                // Si el contenedor está visible, ocultarlo y ocultar la ruta
+                container.style.display = 'none';
+                routingControl.hide();
+            }
+        }
+    </script>
+</body>
+</html>
